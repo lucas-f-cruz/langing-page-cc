@@ -1,0 +1,10 @@
+.footer {
+  background: var(--dark);
+  color: rgba(255,255,255,.45);
+  padding: 36px 8%;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 16px;
+}
+.logo { font-family: var(--font-script); font-size: 1.4rem; color: var(--rose-light); }
+.center, .right { font-size: .8rem; }
+.heart { color: var(--rose); }

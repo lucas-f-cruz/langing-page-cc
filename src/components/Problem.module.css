@@ -1,0 +1,74 @@
+.section { padding: 96px 8%; background: var(--warm-white); }
+
+.sectionTag {
+  color: var(--rose); font-size: .8rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px;
+}
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--dark); line-height: 1.2; margin-bottom: 14px;
+}
+.sectionTitle em { font-style: italic; color: var(--rose); }
+.sectionSub {
+  font-size: 1rem; color: var(--text-light); line-height: 1.7;
+  max-width: 520px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px; align-items: center;
+  margin-top: 56px;
+}
+
+.cards { display: flex; flex-direction: column; gap: 18px; }
+
+.card {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: var(--white); border-radius: var(--radius-lg);
+  padding: 22px; border: 1px solid var(--sand-light);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.card:hover {
+  box-shadow: 0 12px 40px rgba(200,112,112,.10);
+  transform: translateX(6px);
+}
+
+.icon {
+  width: 50px; height: 50px; flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--rose-pale);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+}
+.cardTitle { font-size: .95rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+.cardDesc  { font-size: .85rem; color: var(--text-light); line-height: 1.6; }
+
+/* CTA box */
+.ctaBox {
+  background: linear-gradient(135deg, var(--rose) 0%, #d4807f 100%);
+  border-radius: var(--radius-xl); padding: 48px 40px; color: var(--white);
+  position: relative; overflow: hidden;
+}
+.ctaHeart {
+  position: absolute; top: -20px; right: 20px;
+  font-size: 8rem; opacity: .08; pointer-events: none;
+}
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: 1.85rem; margin-bottom: 16px; line-height: 1.2;
+}
+.ctaText { opacity: .88; line-height: 1.75; margin-bottom: 32px; font-size: .95rem; }
+.ctaBtn {
+  display: inline-block;
+  background: var(--white); color: var(--rose);
+  padding: 14px 30px; border-radius: var(--radius-pill);
+  font-weight: 600; font-size: .95rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.ctaBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.14); }
+
+@media (max-width: 820px) {
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+}
